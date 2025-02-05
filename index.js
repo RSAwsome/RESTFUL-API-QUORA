@@ -115,7 +115,7 @@ app.patch("/posts/:id",(req,res)=>{
     res.redirect("/posts")
 })
 
-let port = 8080;
+let port = process.env.PORT || 8080;
 app.listen(port,()=>{
     console.log(`app is listening at port ${port}`);
 })
